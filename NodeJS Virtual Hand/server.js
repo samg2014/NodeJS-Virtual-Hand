@@ -15,7 +15,7 @@ var configDB = require('./config/database.js');
 // configuration ===============================================================
 mongodb_connection_string = 'mongodb://sgoldman:sgoldman@ds059471.mongolab.com:59471/app_users'; // looks like mongodb://<user>:<pass>@mongo.onmodulus.net:27017/Mikha4ot
 if(process.env.OPENSHIFT_MONGODB_DB_URL){
-	  mongodb_connection_string = process.env.OPENSHIFT_MONGODB_DB_URL + db_name;
+	  mongodb_connection_string = process.env.OPENSHIFT_MONGODB_DB_URL + 'virtualhandnode';
 }
 mongoose.connect(mongodb_connection_string);
 //mongoose.connect(configDB.url); // connect to our database
